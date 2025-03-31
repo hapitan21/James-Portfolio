@@ -1,0 +1,318 @@
+/* General Styles */
+@import 'aos/dist/aos.css';
+
+.App, body {
+  font-family: 'Oswald', sans-serif; /* Use Oswald font */
+  text-align: center;
+  
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the GIF as the background for the entire app */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  background: url('https://i.pinimg.com/originals/36/e4/d0/36e4d0b856694fc471344b644a1dd6e4.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Ensure content is readable by giving it a background and styling */
+.App {
+  position: relative;
+  z-index: 1;
+  color: white; /* Change color to ensure visibility over the GIF */
+}
+
+header, section, footer {
+  padding: 3rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-holder div {
+  width: 100%;
+}
+
+.image-holder img {
+  width: 60%;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1rem;
+}
+
+.header nav a:hover {
+  background-color: #66fcf1; /* Change background color on hover */
+  color: #000000; /* Change text color on hover if needed */
+}
+
+.header nav a {
+  color: white; /* Change this to your desired text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: .5rem; /* Add padding for better spacing */
+  border-radius: 20px; /* Rounded corners for a softer look */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  cursor: pointer;
+}
+
+.skill-bar {
+  background-color: white;
+  border-radius: 25px;
+  width: 100%;
+  height: 20px; /* Adjust height to suit most screens */
+  overflow: hidden;
+  margin: 10px 0; /* Adjusted margin */
+  position: relative;
+  transition: height 0.3s ease; /* Smooth transition when height changes */
+}
+
+.skill-level {
+  background-color: #45a29e; /* Updated color for progress bars */
+  height: 100%;
+  border-radius: 25px;
+  width: 100%; /* Let the width be dynamic based on JavaScript or inline style */
+  transition: width 0.4s ease, background-color 0.3s ease; /* Smooth transition for both width and color change */
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project {
+  width: 100%;
+}
+
+.project img {
+  width: 100%;
+}
+
+.project a {
+  background-color: #0b0c10;
+  color: #45a29e;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+  background-color: #555;
+}
+
+
+/* Footer Links */
+.contact a {
+  color: #333;
+  text-decoration: none;
+  color: white;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.contact a:hover {
+  color: #66fcf1;
+}
+
+/* Footer Styles */
+.footer {
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  color: #66fcf1;
+}
+
+.social-links a svg {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+@media (max-width: 600px) {
+  section, header, footer {
+    padding: 2rem 1rem;
+  }
+
+  header nav {
+    font-size: 1rem;
+  }
+
+  header {
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 601px) {
+
+  h2 {
+    font-size: 4rem;
+  }
+  .image-holder img {
+    width: 30%;
+  }
+
+  header {
+    line-height: 1.2;
+  }
+
+  header nav {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 3rem;
+  }
+  
+  .about {
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 2rem;
+    padding: 0 15%;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 70%;
+  }
+
+  .contact, .footer {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .project {
+    width: 35%;
+  }
+  
+  .project-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .project {
+    /* Optional: Add border */
+   padding: 15px;
+   text-align: center;
+   font-size: 30px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow */
+   cursor: pointer; /* Change cursor to pointer on hover */
+   /* Background color for the project box */
+   border-radius: 10px;
+ }
+ 
+ .project:hover {
+   transform: translateY(-10px); /* Lift the project box slightly upwards on hover */
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Add a shadow for depth on hover */
+ }
+ 
+ .project a {
+   display: inline-block;
+   margin-top: 0.5rem;
+   padding: 0.5rem 1rem;
+   background-color: #090909;
+   color: #15a340;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button */
+ }
+ 
+ .project a:hover {
+   background-color: #15a340; /* Lighter color on hover */
+   color: #000; /* Darker text color on hover */
+ }
+ 
+ /* Adding subtle animations to project content */
+ .project img {
+   transition: transform 0.3s ease; /* Smooth image zoom effect */
+ }
+ 
+ .project:hover img {
+   transform: scale(1.05); /* Slightly zoom in the image on hover */
+ }
+ 
+ /* Project Titles */
+ .project-title {
+   font-size: 40px; /* Adjust the font size for project titles */
+   font-weight: bold; /* Make the titles bold */
+   color: white; /* Optional: Change color to match your theme */
+   transition: color 0.3s ease; /* Smooth color transition */
+ }
+ 
+ .project:hover .project-title {
+   color: #66fcf1; /* Change color on hover */
+ }
+ 
+
+ .project-description {
+   font-size: 30px; 
+   color: white;
+   margin-bottom: 1rem; 
+   transition: color 0.3s ease; 
+ }
+ 
+ .project:hover .project-description {
+   color: #66fcf1; 
+ }
+
+ .joshua {
+  font-size: 2.5rem;
+ }
+}
