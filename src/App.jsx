@@ -32,11 +32,13 @@ function Header() {
   return (
     <header className="header" data-aos="fade-down">
       <div className="image-holder">
-        <img src={JamessImage} alt="Josh" />
+        <img src={JamessImage} alt="Jamess" />
       </div>
-      <h1 className="joshua">James Freian Hapitan </h1>
-      <p>Networker | Frond-end Designer | Tech Specialist</p>
-      <nav className='nav-links'>
+      <header>
+     <h1>James Freian Hapitan</h1>
+    <p class="role">Networker | Front-end Designer | Tech Specialist</p>
+    </header>
+      <nav className='top-navbar'>
         <Link to="about" smooth={true} duration={500}>About</Link>
         <Link to="skills" smooth={true} duration={500}>Skills</Link>
         <Link to="projects" smooth={true} duration={500}>Projects</Link>
@@ -50,11 +52,15 @@ function About() {
   return (
     <section id="about" className="about" data-aos="fade-up">
       <h2>About Me</h2>
+      <div class="image-holder">
+    <img 
+      src={JamessImage} alt="James"/>
       <p>
         Hello! I'm James Freian Hapitan, second year IT student passionate about technology and its endless possibilities.
         I am currently pursuing my degree at the Western Institute of Technology, where I'm diving deep into 
         the world of information technology.
       </p>
+      </div>
     </section>
   );
 }

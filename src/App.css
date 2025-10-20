@@ -2,7 +2,7 @@
 @import 'aos/dist/aos.css';
 
 .App, body {
-  font-family: 'Oswald', sans-serif; /* Use Oswald font */
+  font-family: sans-serif,poppins; /* Use Oswald font */
   text-align: center;
   
   margin: 0;
@@ -13,7 +13,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: poppins, sans-serif;
   background: url('https://i.pinimg.com/originals/36/e4/d0/36e4d0b856694fc471344b644a1dd6e4.gif') no-repeat center center fixed;
   background-size: cover;
 }
@@ -38,13 +38,11 @@ header {
 .image-holder div {
   width: 100%;
 }
-
-.image-holder img {
-  width: 60%;
-}
-
 header h1 {
-  font-size: 2rem;
+ margin-top: -270px; /* moves your name higher (negative pulls it up) */
+ font-size: 2.1rem; /* 👈 name size (40px if 1rem = 16px) */
+  font-weight: 700;
+  margin-right: 360px;
 }
 
 header p {
@@ -54,8 +52,13 @@ header p {
 header nav {
   display: flex;
   justify-content: center;
-  gap: .5rem;
-  font-size: 1rem;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-top: 20px;
+  position: sticky; /* keeps it visible while scrolling */
+  top: 10px; /* slight gap from top */
+  z-index: 999; /* ensures it stays above other elements */
 }
 
 .header nav a:hover {
@@ -64,12 +67,37 @@ header nav {
 }
 
 .header nav a {
-  color: white; /* Change this to your desired text color */
-  text-decoration: none; /* Remove underline from links */
-  padding: .5rem; /* Add padding for better spacing */
-  border-radius: 20px; /* Rounded corners for a softer look */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-top: 20px;
+  position: sticky; /* keeps it visible while scrolling */
+  top: 10px; /* slight gap from top */
+  z-index: 999; /* ensures it stays above other elements */
+}
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+.top-navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.0rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.top-navbar a:hover {
+  color: #66fcf1;
+  transform: translateY(-3px);
 }
 
 .skill-bar {
@@ -176,7 +204,7 @@ header nav {
   margin-right: 8px; /* Space between icon and text */
 }
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
   section, header, footer {
     padding: 2rem 1rem;
   }
@@ -196,7 +224,18 @@ header nav {
     font-size: 4rem;
   }
   .image-holder img {
-    width: 30%;
+    /* slightly larger on wider screens but still limited */
+  width: clamp(180px, 25vw, 350px);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-left: 680px;
+    margin-top: 170px;  
+  }
+  .image-holder{
+    text-align: left;
+   border-radius: 20px;
   }
 
   header {
@@ -210,6 +249,14 @@ header nav {
   header p {
     font-size: 3rem;
   }
+  header .role {
+  font-size: 1.5rem; /* 👈 increase or decrease as needed */
+  font-weight: 500;  /* makes it medium bold */
+  font-family: 'Poppins', sans-serif; /* use your main font */
+  color: #66fcf1; /* optional highlight color */
+  letter-spacing: 1px;
+  margin-right: 370px; /* optional: adds spacing between letters */
+}
   
   .about {
     text-align: center;
